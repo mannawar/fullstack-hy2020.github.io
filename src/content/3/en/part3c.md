@@ -755,7 +755,7 @@ const errorHandler = (error, request, response, next) => {
     return response.status(400).send({ error: 'malformatted id' })
   } 
 
-  next(error)
+  return next(error)
 }
 
 app.use(errorHandler)
